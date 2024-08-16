@@ -32,6 +32,8 @@ class Ewelink {
     this.phoneNumber,
     this.arpTable,
     this.devicesCache,
+    this.appId = "",
+    this.appSecret = "",
   }) {
     if (!checkLoginParameters()) {
       throw new EwelinkInvalidCredentials();
@@ -48,8 +50,8 @@ class Ewelink {
   String? password;
   String region;
   EwelinkCredentials? credentials;
-  final String appId = EwelinkConstants.DefaultAppID;
-  final String appSecret = EwelinkConstants.DefaultAppSecret;
+  String appId;
+  String appSecret;
   String? phoneNumber;
   Map<String, dynamic>? arpTable;
   Map<String, dynamic>? devicesCache;
